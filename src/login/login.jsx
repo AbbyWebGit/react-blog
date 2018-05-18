@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { withRouter} from 'react-router-dom'
 
 class Login extends Component {
   constructor(props) {
@@ -6,34 +7,56 @@ class Login extends Component {
     super(props);
 
     this.state = {
+      user: "",
+      pas: "",
 
-      // posts: {}
-
+      btnDisable: true
     };
 
   }
   login() {
     var name = document.getElementById("name").value;
     var pas = document.getElementById("pas").value;
-    var formData=new FormData();
-    formData.append("username",name);
-    formData.append("password",pas);
-    console.log(pas,name);
+  // console.log(pas,name);
+   
+    var formData = new FormData();
+    formData.append("username", name);
+    formData.append("password", pas);
+    
+    this.props.history.push('/main/add');
 
+  }
+  change(type, e) {
+    if (type == "name") {
+      this.setState({user: e.target.value});
+    } else {
+      this.setState({pas: e.target.value});
+    }
+    if (this.state.user != "" && this.state.pas != "") {
+      this.setState({btnDisable: false});
+
+    }
   }
   render() {
     return (
       <div className="login">
         <div>
           <span>用户名</span>
-          <input id="name"/></div>
+          <input
+            id="name"
+            onChange={this.change.bind(this, "name")}/></div>
 
         <div>
           <span>密码</span>
-          <input id="pas"/></div>
-        <button onClick={this
+          <input
+            id="pas"
+            onChange={this.change.bind(this, "pas")}/>
+        </div>
+        <button
+          onClick={this
           .login
-          .bind(this)}>登录</button>
+          .bind(this)}
+          disabled={this.state.btnDisable}>登录</button>
 
       </div>
     );
