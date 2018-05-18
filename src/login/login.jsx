@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { withRouter} from 'react-router-dom'
+import "./login.scss"
 
 class Login extends Component {
   constructor(props) {
@@ -40,23 +41,17 @@ class Login extends Component {
   render() {
     return (
       <div className="login">
-        <div>
-          <span>用户名</span>
-          <input
-            id="name"
-            onChange={this.change.bind(this, "name")}/></div>
-
-        <div>
-          <span>密码</span>
-          <input
-            id="pas"
-            onChange={this.change.bind(this, "pas")}/>
+       <h4 class="login-title">登录</h4>
+        <div className="form">
+          <input id="name" placeholder="请输入用户名" onChange={this.change.bind(this, "name")} className="name"/>
+         
+          <input  id="pas" placeholder="请输入密码" onChange={this.change.bind(this, "pas")}/>
         </div>
         <button
           onClick={this
           .login
           .bind(this)}
-          disabled={this.state.btnDisable}>登录</button>
+          disabled={this.state.btnDisable} className="loginBtn">登录</button>
 
       </div>
     );
