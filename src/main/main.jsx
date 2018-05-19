@@ -8,14 +8,14 @@ class Main extends Component {
         return (
             <div className="main">
                 <header className="main-header">
+                <div className="header-wrap clearfix">
                     <div className="logo">
                         <img src={require('../images/logo.jpg')} alt=""/>
+                        <span className="main-name">博客</span>
                     </div>
-
-                    <div className="user"></div>
-
-                    <h1 className="App-title">我是主页</h1>
-                    <p>这是路由</p>
+                    
+                    <div className="user">  <img src={require('../images/user.png')} alt=""/></div>
+                </div>
                 </header>
                 <div className="main-content">
                     <div>

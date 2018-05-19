@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-import { withRouter} from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 import "./login.scss"
 
 class Login extends Component {
   constructor(props) {
-
     super(props);
-
     this.state = {
       user: "",
       pas: "",
@@ -18,12 +16,10 @@ class Login extends Component {
   login() {
     var name = document.getElementById("name").value;
     var pas = document.getElementById("pas").value;
-  // console.log(pas,name);
-   
     var formData = new FormData();
     formData.append("username", name);
     formData.append("password", pas);
-    
+
     this.props.history.push('/main/add');
 
   }
@@ -41,17 +37,13 @@ class Login extends Component {
   render() {
     return (
       <div className="login">
-       <h4 class="login-title">登录</h4>
+        <h4 class="login-title">登录</h4>
         <div className="form">
-          <input id="name" placeholder="请输入用户名" onChange={this.change.bind(this, "name")} className="name"/>
-         
-          <input  id="pas" placeholder="请输入密码" onChange={this.change.bind(this, "pas")}/>
+          <input id="name" placeholder="请输入用户名" onChange={this.change.bind(this, "name")}
+            className="name"/>
+          <input id="pas" placeholder="请输入密码"  onChange={this.change.bind(this, "pas")}/>
         </div>
-        <button
-          onClick={this
-          .login
-          .bind(this)}
-          disabled={this.state.btnDisable} className="loginBtn">登录</button>
+        <button onClick={this.login.bind(this)} disabled={this.state.btnDisable} className="loginBtn">登录</button>
 
       </div>
     );

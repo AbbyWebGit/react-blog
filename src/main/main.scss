@@ -1,5 +1,35 @@
-.main-header{
+.main-header {
     height: 60px;
     width: 100%;
     border-bottom: 1px #f0f0f0 solid;
+    .header-wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .user {
+        float:right;
+        margin-top: 15px;
+
+        img{
+            height: 32px;
+
+        }
+    }
+    .logo {
+        // height: 60px;
+        float: left;
+        padding-top: 10px;
+        img {
+            height: 40px;
+            border-radius: 50%;
+        }
+        .main-name{
+            font-size: 20px;
+            color: #ea6f5a;
+            display: inline-block;
+            vertical-align: top;
+            margin: 5px 0 0 10px;
+
+        }
+    }
 }
