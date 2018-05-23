@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "./list.scss"
+import {Link} from 'react-router-dom'
 
 class List extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class List extends Component {
   render() {
     return (
       <div className="editWrap">
+      <button className="addBtn"><Link to={{pathname: "/main/add"}}>+ 添加</Link></button>
 {/*      
         <ul id="blogList">
           {this.state.user.map(function (item, i) {
@@ -37,10 +39,12 @@ class List extends Component {
         </ul> */}
         <table className='itemList'>
             <thead>
-                <th className='itemTd'>时间</th>
-                <th className='itemTd'>题目</th>
-                <th className='itemTd'>内容</th>
-                <th className='itemTd'>操作</th>
+            <tr className="ff">
+                <td className='itemTd1'>时间</td>
+                <td className='itemTd'>题目</td>
+                <td className='itemTd'>内容</td>
+                <td className='itemTd4'>操作</td>
+              </tr>
             </thead>
             <tbody>
             {this.state.week.map(function (item, i) {
@@ -53,7 +57,7 @@ class List extends Component {
                 </tr>
               );
             })
-}
+            }
             </tbody>
           </table>
       </div>
