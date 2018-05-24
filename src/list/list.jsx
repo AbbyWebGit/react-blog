@@ -53,7 +53,7 @@ class List extends Component {
                   <td>{item.time} </td>
                   <td>{item.title}</td>
                   <td>{item.content}</td>
-                  <td><a>查看</a><a>编辑</a><a>删除</a></td>
+                  <td><Link to={{pathname: "/main/detail"}}>查看</Link><Link to={{pathname: "/main/add"}}>编辑</Link><a>删除</a></td>
                 </tr>
               );
             })

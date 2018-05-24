@@ -20,7 +20,7 @@ class Login extends Component {
     formData.append("username", name);
     formData.append("password", pas);
 
-    this.props.history.push('/main/add');
+    this.props.history.push('/main/list');
 
   }
   change(type, e) {

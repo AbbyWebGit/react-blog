@@ -25,7 +25,10 @@ class Add extends Component {
     localStorage.setItem('title',this.state.editorTitle);
     localStorage.setItem('content',this.state.editorContent);
 
-    // console.log(this.state.editorTitle,this.state.editorContent)
+    // axios请求
+    //跳转
+    this.props.history.push('/main/list');
+
   }
   handChange(e){
    

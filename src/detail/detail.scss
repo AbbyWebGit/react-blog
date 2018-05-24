@@ -1,0 +1,48 @@
+.detailWrap {
+    margin: 50px auto 10px;
+    width: 650px;
+    font-size: 14px;
+    .detailTitle {
+        font-size: 34px;
+        font-weight: bold;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+    .headImg{
+        margin-bottom: 20px;
+    }
+    .imgLeft{
+        float: left;
+        a{
+            border: 1px solid #ddd;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        img{
+            width: 38px;
+            height: 38px;
+            vertical-align: middle;     
+            border-radius: 50%;
+        }
+        .author{
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        .time{
+            margin-left: 10px;
+            font-size: 14px;
+            color:#969696;
+        }
+      
+
+
+    
+
+    }
+    .addBtn{
+        float: right;
+    }
+
+}
